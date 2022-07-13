@@ -5,6 +5,8 @@
     "app": "apps/app",
     "app-e2e": "apps/app-e2e",
     "feature-home": "libs/feature/home",
+    "navigation-native": "libs/navigation/native",
+    "provider-navigation": "libs/provider/navigation",
     "site": "apps/site",
     "site-e2e": "apps/site-e2e"
   }
