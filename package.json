@@ -30,9 +30,11 @@
     "react-native-svg-transformer": "1.0.0",
     "react-native-web": "0.17.7",
     "regenerator-runtime": "0.13.7",
+    "solito": "^0.0.26",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@expo/next-adapter": "^4.0.8",
     "@nrwl/cli": "14.4.2",
     "@nrwl/cypress": "14.4.2",
     "@nrwl/detox": "14.4.2",
@@ -74,6 +76,10 @@
     "jest-expo": "45.0.1",
     "metro-babel-register": "0.71.0",
     "metro-resolver": "0.71.0",
+    "next-compose-plugins": "^2.2.1",
+    "next-fonts": "^1.5.1",
+    "next-images": "^1.8.4",
+    "next-transpile-modules": "^9.0.0",
     "nx": "14.4.2",
     "prettier": "^2.6.2",
     "react-test-renderer": "18.2.0",
