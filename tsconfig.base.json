@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-expo-nextjs/feature/home": ["libs/feature/home/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

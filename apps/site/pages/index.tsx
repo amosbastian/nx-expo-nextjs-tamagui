@@ -1,10 +1,3 @@
-export function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.css file.
-   */
-  return <div>HELLO, WORLD!</div>;
-}
+import { Screen } from '@nx-expo-nextjs/feature/home';
 
-export default Index;
+export default Screen;
