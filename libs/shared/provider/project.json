@@ -1,6 +1,6 @@
 {
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/provider/src",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/provider/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -8,14 +8,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/provider/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/shared/provider/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/provider"],
+      "outputs": ["coverage/libs/shared/provider"],
       "options": {
-        "jestConfig": "libs/provider/jest.config.ts",
+        "jestConfig": "libs/shared/provider/jest.config.ts",
         "passWithNoTests": true
       }
     }

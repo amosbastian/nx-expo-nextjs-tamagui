@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
-  displayName: 'provider',
-  preset: '../../jest.preset.js',
+  displayName: 'shared-provider',
+  preset: '../../../jest.preset.js',
   transform: {
     '^.+\\.[tj]sx?$': [
       '@swc/jest',
@@ -9,5 +9,5 @@ export default {
     ],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/provider',
+  coverageDirectory: '../../../coverage/libs/shared/provider',
 };

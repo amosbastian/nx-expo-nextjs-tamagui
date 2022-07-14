@@ -1,4 +1,4 @@
-import { Provider } from '@nx-expo-nextjs/provider';
+import { Provider } from '@nx-expo-nextjs/shared-provider';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
@@ -9,7 +9,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Welcome to site!</title>
       </Head>
       <Provider>
-        <main className="app">
+        <main className="app" style={{ minHeight: '100vh', display: 'flex' }}>
           <Component {...pageProps} />
         </main>
       </Provider>
