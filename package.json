@@ -49,6 +49,8 @@
     "@nrwl/web": "14.4.2",
     "@nrwl/workspace": "14.4.2",
     "@svgr/webpack": "^5.5.0",
+    "@swc/core": "^1.2.173",
+    "@swc/jest": "0.2.20",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/jest-native": "4.0.5",
     "@testing-library/react": "13.3.0",

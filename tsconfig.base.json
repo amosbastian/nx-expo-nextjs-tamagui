@@ -16,12 +16,11 @@
     "baseUrl": ".",
     "paths": {
       "@nx-expo-nextjs/feature/home": ["libs/feature/home/src/index.ts"],
+      "@nx-expo-nextjs/feature/user": ["libs/feature/user/src/index.ts"],
       "@nx-expo-nextjs/navigation/native": [
         "libs/navigation/native/src/index.ts"
       ],
-      "@nx-expo-nextjs/provider/navigation": [
-        "libs/provider/navigation/src/index.ts"
-      ]
+      "@nx-expo-nextjs/provider": ["libs/provider/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

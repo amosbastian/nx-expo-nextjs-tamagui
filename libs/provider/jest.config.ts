@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
-  displayName: 'feature-home',
-  preset: '../../../jest.preset.js',
+  displayName: 'provider',
+  preset: '../../jest.preset.js',
   transform: {
     '^.+\\.[tj]sx?$': [
       '@swc/jest',
@@ -9,5 +9,5 @@ export default {
     ],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../../coverage/libs/feature/home',
+  coverageDirectory: '../../coverage/libs/provider',
 };

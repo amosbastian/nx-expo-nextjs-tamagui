@@ -1,9 +1,10 @@
 import { Screen as HomeScreen } from '@nx-expo-nextjs/feature/home';
+import { Screen as UserScreen } from '@nx-expo-nextjs/feature/user';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator<{
   home: undefined;
-  'user-detail': {
+  user: {
     id: string;
   };
 }>();
@@ -18,13 +19,13 @@ export function NativeNavigation() {
           title: 'Home',
         }}
       />
-      {/* <Stack.Screen
-        name="user-detail"
-        component={UserDetailScreen}
+      <Stack.Screen
+        name="user"
+        component={UserScreen}
         options={{
           title: 'User',
         }}
-      /> */}
+      />
     </Stack.Navigator>
   );
 }

@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'feature-home',
+  displayName: 'feature-user',
   preset: '../../../jest.preset.js',
   transform: {
     '^.+\\.[tj]sx?$': [
@@ -9,5 +9,5 @@ export default {
     ],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../../coverage/libs/feature/home',
+  coverageDirectory: '../../../coverage/libs/feature/user',
 };
