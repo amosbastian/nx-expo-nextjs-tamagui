@@ -1,10 +1,9 @@
 import { render } from '@testing-library/react';
+import { NativeNavigation } from './navigation-native';
 
-import NavigationNative from './navigation-native';
-
-describe('NavigationNative', () => {
+describe('NativeNavigation', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<NavigationNative />);
+    const { baseElement } = render(<NativeNavigation />);
     expect(baseElement).toBeTruthy();
   });
 });
