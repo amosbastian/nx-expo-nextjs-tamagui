@@ -12,7 +12,9 @@
         "outputPath": "dist/apps/site"
       },
       "configurations": {
-        "development": {},
+        "development": {
+          "outputPath": "tmp/apps/site"
+        },
         "production": {}
       }
     },
