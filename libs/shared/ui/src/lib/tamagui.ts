@@ -41,7 +41,7 @@ const bodyFont = createInterFont(
   }
 );
 
-export const config = createTamagui({
+export const tamaguiConfiguration = createTamagui({
   animations,
   defaultTheme: 'light',
   shouldAddPrefersColorThemes: true,

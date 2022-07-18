@@ -1,4 +1,4 @@
-import { Provider } from '@nx-expo-nextjs/shared-provider';
+import { Provider } from '@nx-expo-nextjs/shared/provider';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 

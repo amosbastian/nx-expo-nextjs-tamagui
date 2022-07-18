@@ -1,5 +1,5 @@
 import { NativeNavigation } from '@nx-expo-nextjs/navigation/native';
-import { Provider } from '@nx-expo-nextjs/shared-provider';
+import { Provider } from '@nx-expo-nextjs/shared/provider';
 import React from 'react';
 
 const App = () => {

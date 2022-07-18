@@ -10,21 +10,6 @@
     "shared-provider": "libs/shared/provider",
     "shared-ui": "libs/shared/ui",
     "site": "apps/site",
-    "site-e2e": "apps/site-e2e",
-    "tamagui": {
-      "root": "libs/tamagui",
-      "sourceRoot": "libs/tamagui/src",
-      "projectType": "library",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["libs/tamagui/**/*.ts"]
-          }
-        }
-      },
-      "tags": []
-    }
+    "site-e2e": "apps/site-e2e"
   }
 }
