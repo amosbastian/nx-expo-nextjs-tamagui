@@ -42,7 +42,7 @@ module.exports = withPlugins(
       'expo-linking',
       'expo-constants',
       'expo-modules-core',
-      // '@nx-expo-nextjs/tamagui', FIXME: can't do this (if it's needed) because of no package.json
+      // '@nx-expo-nextjs/shared/ui', // FIXME: can't do this (if it's needed) because of no package.json
     ]),
     // withFonts,
     // withImages,
