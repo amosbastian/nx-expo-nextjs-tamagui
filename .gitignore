@@ -53,3 +53,5 @@ web-build/
 
 
 apps/app-e2e/artifacts
+
+.env
