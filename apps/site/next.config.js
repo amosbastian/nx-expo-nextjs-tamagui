@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const withNx = require('@nrwl/next/plugins/with-nx');
-const { withExpo } = require('@expo/next-adapter');
 const withPlugins = require('next-compose-plugins');
 const withTM = require('next-transpile-modules');
 const { withTamagui } = require('@tamagui/next-plugin');
@@ -41,7 +40,6 @@ const transform = withPlugins(
       'expo-modules-core',
       '@nx-expo-nextjs/ui',
     ]),
-    [withExpo, { projectRoot: __dirname + '/../../' }],
     withTamagui({
       config: './apps/site/tamagui.config.ts', // Need full path or it doesn't work
       components: ['tamagui', '@nx-expo-nextjs/ui'],
@@ -58,7 +56,6 @@ const transform = withPlugins(
         'ProgressBar',
         'Picker',
         'Modal',
-        'PressResponder',
         'VirtualizedList',
         'VirtualizedSectionList',
         'AnimatedFlatList',
