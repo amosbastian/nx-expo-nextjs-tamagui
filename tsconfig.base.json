@@ -21,7 +21,7 @@
         "libs/navigation/native/src/index.ts"
       ],
       "@nx-expo-nextjs/shared/provider": ["libs/shared/provider/src/index.ts"],
-      "@nx-expo-nextjs/shared/ui": ["libs/shared/ui/src/index.ts"]
+      "@nx-expo-nextjs/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

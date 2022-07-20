@@ -1,4 +1,4 @@
-import { createTamagui } from '@nx-expo-nextjs/shared/ui';
+import { createTamagui } from 'tamagui';
 import { createInterFont } from '@tamagui/font-inter';
 import { shorthands } from '@tamagui/shorthands';
 import { themes, tokens } from '@tamagui/theme-base';

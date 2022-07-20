@@ -8,8 +8,8 @@
     "feature-user": "libs/feature/user",
     "navigation-native": "libs/navigation/native",
     "shared-provider": "libs/shared/provider",
-    "shared-ui": "libs/shared/ui",
     "site": "apps/site",
-    "site-e2e": "apps/site-e2e"
+    "site-e2e": "apps/site-e2e",
+    "ui": "libs/ui"
   }
 }
