@@ -12,6 +12,9 @@
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
+  "workspaces": [
+    "libs/*"
+  ],
   "dependencies": {
     "@expo/metro-config": "0.3.19",
     "@nrwl/next": "14.4.3",

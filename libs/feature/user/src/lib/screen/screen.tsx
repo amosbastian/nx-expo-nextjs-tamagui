@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, Paragraph, YStack } from '@nx-expo-nextjs/ui';
 import { createParam } from 'solito';
-import { TextLink } from 'solito/link';
+import { Link } from 'solito/link';
 
 const { useParam } = createParam<{ id: string }>();
 
@@ -11,23 +11,14 @@ export function Screen(props: ScreenProps) {
   const [id] = useParam('id');
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>{`User ID: ${id}`}</Text>
-      <TextLink href="/">Go Home</TextLink>
-    </View>
+    <YStack flex={1} justifyContent="center" alignItems="center" space>
+      <Paragraph
+        textAlign="center"
+        fontWeight="800"
+      >{`User ID: ${id}`}</Paragraph>
+      <Link href="/">
+        <Button>Go Home</Button>
+      </Link>
+    </YStack>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 16,
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    textAlign: 'center',
-    fontSize: 14,
-    marginBottom: 16,
-  },
-});

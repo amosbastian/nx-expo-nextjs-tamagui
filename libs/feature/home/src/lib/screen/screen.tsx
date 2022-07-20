@@ -1,31 +1,59 @@
-import { StyleSheet, Text, View } from 'react-native';
-import { TextLink } from 'solito/link';
+import {
+  Anchor,
+  Button,
+  H1,
+  Paragraph,
+  Separator,
+  SharedUi,
+  XStack,
+  YStack,
+} from '@nx-expo-nextjs/ui';
+import { useLink } from 'solito/link';
 
 /* eslint-disable-next-line */
 export interface ScreenProps {}
 
 export function Screen(props: ScreenProps) {
+  const linkProps = useLink({
+    href: '/user/amos',
+  });
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>
-        Here is a basic starter to show you how you can navigate from one screen
-        to another. This screen uses the same code on Next.js and React Native.
-      </Text>
-      <TextLink href="/user/amos">To user profile</TextLink>
-    </View>
+    <YStack
+      flex={1}
+      justifyContent="center"
+      alignItems="center"
+      padding="$4"
+      space
+    >
+      <YStack space="$4" maxWidth={600}>
+        <H1 textAlign="center">Welcome to Tamagui.</H1>
+        <Paragraph textAlign="center">
+          Here's a basic starter to show navigating from one screen to another.
+          This screen uses the same code on Next.js and React Native.
+        </Paragraph>
+        <SharedUi />
+        <Separator />
+        <Paragraph textAlign="center">
+          Tamagui is made by{' '}
+          <Anchor href="https://twitter.com/natebirdman" target="_blank">
+            Nate Wienert
+          </Anchor>
+          , give it a star{' '}
+          <Anchor
+            href="https://github.com/tamagui/tamagui"
+            target="_blank"
+            rel="noreferrer"
+          >
+            on Github
+          </Anchor>
+          .
+        </Paragraph>
+      </YStack>
+
+      <XStack>
+        <Button {...linkProps}>Link to user</Button>
+      </XStack>
+    </YStack>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 16,
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    textAlign: 'center',
-    fontSize: 14,
-    marginBottom: 16,
-  },
-});

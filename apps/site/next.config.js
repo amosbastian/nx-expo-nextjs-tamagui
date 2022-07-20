@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const withNx = require('@nrwl/next/plugins/with-nx');
 const { withExpo } = require('@expo/next-adapter');
-const withFonts = require('next-fonts');
-const withImages = require('next-images');
 const withPlugins = require('next-compose-plugins');
 const withTM = require('next-transpile-modules');
 const { withTamagui } = require('@tamagui/next-plugin');
@@ -33,7 +30,7 @@ const nextConfig = {
   },
 };
 
-module.exports = withPlugins(
+const transform = withPlugins(
   [
     withNx,
     withTM([
@@ -42,21 +39,19 @@ module.exports = withPlugins(
       'expo-linking',
       'expo-constants',
       'expo-modules-core',
-      // '@nx-expo-nextjs/ui',
+      '@nx-expo-nextjs/ui',
     ]),
-    // withFonts,
-    // withImages,
-    // [withExpo, { projectRoot: __dirname + '/../../' }],
+    [withExpo, { projectRoot: __dirname + '/../../' }],
     withTamagui({
       config: './apps/site/tamagui.config.ts', // Need full path or it doesn't work
-      components: ['tamagui', '@nx-expo-nextjs/shared/ui'],
+      components: ['tamagui', '@nx-expo-nextjs/ui'],
       importsWhitelist: ['constants.js', 'colors.js'],
       logTimings: true,
       disableExtraction,
       shouldExtract: (path) => {
-        // if (path.includes('packages/app')) {
-        return true;
-        // }
+        if (path.includes('libs/ui')) {
+          return true;
+        }
       },
       excludeReactNativeWebExports: [
         'Switch',
@@ -76,3 +71,12 @@ module.exports = withPlugins(
   ],
   nextConfig
 );
+
+module.exports = function (name, { defaultConfig }) {
+  defaultConfig.webpack5 = true;
+  // defaultConfig.experimental.reactRoot = 'concurrent'
+  defaultConfig.typescript.ignoreBuildErrors = true;
+  return transform(name, {
+    ...defaultConfig,
+  });
+};
