@@ -1,3 +1,4 @@
+import { ChevronLeft } from '@tamagui/feather-icons';
 import { Button, Paragraph, YStack } from '@nx-expo-nextjs/ui';
 import { createParam } from 'solito';
 import { Link } from 'solito/link';
@@ -17,7 +18,7 @@ export function Screen(props: ScreenProps) {
         fontWeight="800"
       >{`User ID: ${id}`}</Paragraph>
       <Link href="/">
-        <Button>Go Home</Button>
+        <Button icon={ChevronLeft}>Go Home</Button>
       </Link>
     </YStack>
   );

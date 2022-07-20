@@ -1,3 +1,4 @@
+import { ChevronDown, ChevronUp } from '@tamagui/feather-icons';
 import {
   Anchor,
   Button,
@@ -7,8 +8,10 @@ import {
   SharedUi,
   XStack,
   YStack,
+  Sheet,
 } from '@nx-expo-nextjs/ui';
 import { useLink } from 'solito/link';
+import * as React from 'react';
 
 /* eslint-disable-next-line */
 export interface ScreenProps {}
@@ -16,6 +19,8 @@ export interface ScreenProps {}
 export function Screen(props: ScreenProps) {
   const linkProps = useLink({
     href: '/user/amos',
+    as: '/user/amos',
+    shallow: false,
   });
 
   return (
@@ -50,10 +55,48 @@ export function Screen(props: ScreenProps) {
           .
         </Paragraph>
       </YStack>
-
       <XStack>
         <Button {...linkProps}>Link to user</Button>
       </XStack>
+      <SheetDemo />
     </YStack>
+  );
+}
+
+function SheetDemo() {
+  const [open, setOpen] = React.useState(false);
+  const [position, setPosition] = React.useState(0);
+
+  return (
+    <>
+      <Button
+        size="$6"
+        icon={open ? ChevronDown : ChevronUp}
+        circular
+        onPress={() => setOpen((x) => !x)}
+      />
+      <Sheet
+        modal
+        open={open}
+        onChangeOpen={setOpen}
+        snapPoints={[80]}
+        position={position}
+        onChangePosition={setPosition}
+        dismissOnSnapToBottom
+      >
+        <Sheet.Overlay />
+        <Sheet.Frame alignItems="center" justifyContent="center">
+          <Sheet.Handle />
+          <Button
+            size="$6"
+            circular
+            icon={ChevronDown}
+            onPress={() => {
+              setOpen(false);
+            }}
+          />
+        </Sheet.Frame>
+      </Sheet>
+    </>
   );
 }
