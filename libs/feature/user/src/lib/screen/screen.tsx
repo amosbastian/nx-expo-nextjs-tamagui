@@ -1,7 +1,7 @@
-import { ChevronLeft } from '@tamagui/feather-icons';
 import { Button, Paragraph, YStack } from '@nx-expo-nextjs/ui';
+import { ChevronLeft } from '@tamagui/feather-icons';
 import { createParam } from 'solito';
-import { Link } from 'solito/link';
+import { useLink } from 'solito/link';
 
 const { useParam } = createParam<{ id: string }>();
 
@@ -11,15 +11,21 @@ export interface ScreenProps {}
 export function Screen(props: ScreenProps) {
   const [id] = useParam('id');
 
+  const linkProps = useLink({
+    href: '/',
+    as: '/',
+    shallow: false,
+  });
+
   return (
     <YStack flex={1} justifyContent="center" alignItems="center" space>
       <Paragraph
         textAlign="center"
         fontWeight="800"
       >{`User ID: ${id}`}</Paragraph>
-      <Link href="/">
-        <Button icon={ChevronLeft}>Go Home</Button>
-      </Link>
+      <Button icon={ChevronLeft} {...linkProps}>
+        Go home
+      </Button>
     </YStack>
   );
 }
