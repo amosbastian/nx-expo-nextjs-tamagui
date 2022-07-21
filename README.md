@@ -1,12 +1,13 @@
-# Nx, Expo, Next.js with Solito monorepo
+# Nx, Expo, Next.js, Solito and Tamagui monorepo
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/9199433/179087650-a7a6ce7d-9022-49db-b09c-6fdf9be89b6c.gif" alt="GIF showing the site and app" />
+<img src="https://user-images.githubusercontent.com/9199433/180325908-3c055905-f3a6-492a-996a-f138461e5fbc.gif" alt="GIF showing the site and app" />
 </div>
+
 
 ## 🔦 About
 
-This monorepo is a copy of the "blank" monorepo found in the [Solito repository](https://github.com/nandorojo/solito).
+This monorepo is a copy of the "next-expo-solito" monorepo found in the [Tamagui starters repository](https://github.com/tamagui/starters).
 The only difference is that this monorepo is using Nx and the folder structure is slightly different because of that.
 
 ## 📦 Included packages
@@ -15,6 +16,7 @@ The only difference is that this monorepo is using Nx and the folder structure i
 - Expo SDK 45
 - Next.js 12
 - React Navigation 6
+- Tamagui
 
 ## 🗂 Folder layout
 
@@ -31,6 +33,7 @@ The only difference is that this monorepo is using Nx and the folder structure i
 ## 🏁 Start the app
 
 - Install dependencies
+- Build Tamagui: `cd libs/ui && npm run build`
 - Next.js: `nx serve site`
 - Expo: `nx serve app`
 
